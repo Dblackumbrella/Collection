@@ -1,8 +1,8 @@
-#This test informs couples of their chance of having a child with sickel cell trait#
+#This test informs couples of their chance of having a child with sickel cell trait
 print("**|SICKLER CHILD TEST|**")
-#Collect users name#
+#Collect users name
 name = input("Enter your name: ")
-#Display the various genotypes for user to pick from# 
+#Display the various genotypes for user to pick from
 print ("""Genotype
 1: AA
 2: AS
@@ -10,7 +10,7 @@ print ("""Genotype
 4: SC
 5: CC
 6: SS""")
-
+#Collect input for user's genotype
 while True:
     try:
         genotype1 = int(input("Choose genotype: "))
@@ -18,7 +18,7 @@ while True:
             break
     except ValueError:
             print("Please enter value between 1-6")
-            
+#Reassign user's input to genotype string         
 if genotype1 == 1:
     genotype1 = "AA"
 elif genotype1 == 2:
@@ -31,10 +31,12 @@ elif genotype1 == 5:
     genotype1 = "CC"
 elif genotype1 == 6:
     genotype1 = "SS"
-    
+#Display user name and genotype
 print(name)
 print("Genotype %s" %(genotype1))
+#Collect user partner's name
 name1 = input("Enter name of partner: ")
+#Display the different genotypes
 print("""Genotype
 1: AA
 2: AS
@@ -42,7 +44,7 @@ print("""Genotype
 4: SC
 5: CC
 6: SS""")
-
+#Collect input for user patner's genotype as genotype2
 while True:
     try:
         genotype2 = int(input("Choose genotype: "))
@@ -50,7 +52,7 @@ while True:
             break
     except ValueError:
             print("Please enter value between 1-6")
-            
+#Reassign user partner's input to genotype string         
 if genotype2 == 1:
     genotype2 = "AA"
 elif genotype2 == 2:
@@ -63,9 +65,10 @@ elif genotype2 == 5:
     genotype2 = "CC"
 elif genotype2 == 6:
     genotype2 = "SS"
-    
+#Display user partner's name and genotype
 print("your partner %s" %(name1))
 print("genotype: %s:" %(genotype2))
+#Display advice for user and partner based on their genotype
 if genotype1 == genotype2 == "AA":
     print("%s, you and your partner %s are good to go!" %(name, name1))
 elif genotype1 == genotype2 == "AS":
